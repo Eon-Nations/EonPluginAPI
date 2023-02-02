@@ -5,6 +5,8 @@ import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.ServicesManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Optional;
+
 public abstract class EonPlugin extends JavaPlugin {
 
     public abstract void load();
@@ -27,7 +29,8 @@ public abstract class EonPlugin extends JavaPlugin {
     }
 
     public <T> T getService(Class<T> service) {
-        RegisteredServiceProvider<T> provider = getServer().getServicesManager().getRegistration(service);
+        RegisteredServiceProvider<T> provider = Optional.ofNullable(getServer().getServicesManager().getRegistration(service))
+                .orElseThrow();
         return provider.getProvider();
     }
 
@@ -39,5 +42,4 @@ public abstract class EonPlugin extends JavaPlugin {
         ServicesManager manager = getServer().getServicesManager();
         manager.register(serviceClass, service, this, priority);
     }
-
 }
