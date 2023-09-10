@@ -4,29 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="" />
+    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Vault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/DatabaseNation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/DatabaseTown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/DatabaseVault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/SQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/queries/TableQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/sql/SQLClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestSQLClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/database/MySQLTestContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/database/TestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/EonPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/EonPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Deposit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Economy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Withdrawal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Nation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Nation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Spawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Spawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Town.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/sql/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/SQLClient.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Record" />
         <option value="AnnotationType" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2KvSH2e0u0rITyxhl7y21CZk1mw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -39,6 +78,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sql-client&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/colin/Documents/GitHub/EonPluginAPI/src/main/java/org/eonnations/eonpluginapi&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -58,7 +99,7 @@
       <recent name="C:\Users\colin\Documents\GitHub\EonPluginAPI\src\main\java\org\eonnations\eonpluginapi" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TestSQLClient.testSetup">
     <configuration name="EonPlugin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.eonnations.eonpluginapi.EonPlugin" />
       <module name="EonPluginAPI" />
@@ -72,8 +113,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestResult.testResultVault" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EonPluginAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="database" />
+      <option name="MAIN_CLASS_NAME" value="database.TestResult" />
+      <option name="METHOD_NAME" value="testResultVault" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSQLClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EonPluginAPI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSQLClient" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSQLClient.testSetup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EonPluginAPI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSQLClient" />
+      <option name="METHOD_NAME" value="testSetup" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestSQLClient.testSetup" />
+        <item itemvalue="JUnit.TestResult.testResultVault" />
+        <item itemvalue="JUnit.TestSQLClient" />
         <item itemvalue="Application.EonPlugin" />
       </list>
     </recent_temporary>
@@ -94,6 +173,22 @@
       <workItem from="1675190802795" duration="2391000" />
       <workItem from="1675269256679" duration="4650000" />
       <workItem from="1675281592737" duration="6024000" />
+      <workItem from="1693316833865" duration="10888000" />
+      <workItem from="1693340544346" duration="1458000" />
+      <workItem from="1693407779245" duration="18951000" />
+      <workItem from="1693494819686" duration="10261000" />
+      <workItem from="1693587638634" duration="1330000" />
+      <workItem from="1693600367158" duration="518000" />
+      <workItem from="1693676719909" duration="623000" />
+      <workItem from="1693858216666" duration="679000" />
+      <workItem from="1693863608869" duration="3892000" />
+      <workItem from="1693930987336" duration="2278000" />
+      <workItem from="1693933274033" duration="3529000" />
+      <workItem from="1694019045628" duration="4025000" />
+      <workItem from="1694028408784" duration="8499000" />
+      <workItem from="1694041020424" duration="402000" />
+      <workItem from="1694144984706" duration="2443000" />
+      <workItem from="1694383104454" duration="3678000" />
     </task>
     <servers />
   </component>

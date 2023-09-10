@@ -1,4 +1,4 @@
-package org.eonnations.eonpluginapi.database;
+package org.eonnations.eonpluginapi.database.sql;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
