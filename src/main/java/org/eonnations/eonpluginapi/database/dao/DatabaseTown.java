@@ -1,4 +1,4 @@
-package org.eonnations.eonpluginapi.database;
+package org.eonnations.eonpluginapi.database.dao;
 
 public class DatabaseTown {
     String owner;

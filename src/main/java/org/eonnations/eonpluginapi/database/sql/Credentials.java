@@ -1,4 +1,4 @@
-package org.eonnations.eonpluginapi.database;
+package org.eonnations.eonpluginapi.database.sql;
 
 import org.eonnations.eonpluginapi.EonPlugin;
 

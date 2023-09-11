@@ -1,6 +1,6 @@
 package database;
 
-import org.eonnations.eonpluginapi.database.Credentials;
+import org.eonnations.eonpluginapi.database.sql.Credentials;
 import org.eonnations.eonpluginapi.database.sql.Result;
 import org.junit.jupiter.api.BeforeEach;
 import org.testcontainers.containers.GenericContainer;

@@ -7,9 +7,8 @@ import org.eonnations.eonpluginapi.api.economy.Vote;
 import org.eonnations.eonpluginapi.api.nations.Nation;
 import org.eonnations.eonpluginapi.api.nations.Spawn;
 import org.eonnations.eonpluginapi.api.nations.Town;
-import org.eonnations.eonpluginapi.database.Credentials;
-import org.eonnations.eonpluginapi.database.DatabaseNation;
-import org.eonnations.eonpluginapi.database.DatabaseVault;
+import org.eonnations.eonpluginapi.database.dao.DynamicNation;
+import org.eonnations.eonpluginapi.database.dao.DatabaseVault;
 import org.eonnations.eonpluginapi.database.queries.TableQuery;
 
 import java.sql.*;
@@ -162,13 +161,13 @@ public class SQLClient implements Database {
         Vault vault = createVault();
         String NATION_QUERY = "INSERT INTO Nations (Name, Level, VaultID) VALUES (?, ?, ?)";
         sendNoReturn(NATION_QUERY, name, 1, vault.id());
-        return new DatabaseNation(List.of(), name, 1);
+        return new DynamicNation(name, 1);
     }
 
     @Override
     public Optional<Nation> nation(String name) {
         String QUERY = "SELECT Owner, Level, VaultID FROM Nations WHERE Name = ?;";
-        Result<DatabaseNation> nationResult = sendQuery(QUERY, DatabaseNation.class, Exception::printStackTrace, name);
+        Result<DynamicNation> nationResult = sendQuery(QUERY, DynamicNation.class, Exception::printStackTrace, name);
         return nationResult.results().findFirst()
                 .map(n -> n);
     }
@@ -215,7 +214,12 @@ public class SQLClient implements Database {
 
     @Override
     public Optional<Town> town(String name) {
-        String SELECT_QUERY = "SELECT Owner, VaultID, Spawn FROM Towns WHERE Name = ?;";
+        String SELECT_QUERY = """
+        SELECT Owner, VaultID, X, Y, Z, Yaw, Pitch
+        FROM Towns
+        INNER JOIN ON Spawns
+        WHERE Name = ?;
+        """;
 
         return Optional.empty();
     }

@@ -1,6 +1,6 @@
 package database;
 
-import org.eonnations.eonpluginapi.database.DatabaseVault;
+import org.eonnations.eonpluginapi.database.dao.DatabaseVault;
 import org.eonnations.eonpluginapi.database.queries.TableQuery;
 import org.eonnations.eonpluginapi.database.sql.Result;
 import org.junit.jupiter.api.BeforeEach;

@@ -34,55 +34,68 @@ public class TableQuery {
             FOREIGN KEY (VaultID) REFERENCES Vaults(VaultID));
             """;
 
-    public static final String CREATE_PLAYER_TOWN_TABLE = "CREATE TABLE IF NOT EXISTS PlayerTowns (" +
-            "UUID VARCHAR(36), " +
-            "Town VARCHAR(255), " +
-            "PRIMARY KEY (UUID, Town), " +
-            "FOREIGN KEY (UUID) REFERENCES Players(UUID), " +
-            "FOREIGN KEY (Town) REFERENCES Towns(Name));";
+    public static final String CREATE_PLAYER_TOWN_TABLE = """
+            CREATE TABLE IF NOT EXISTS PlayerTowns (
+            UUID VARCHAR(36),
+            Town VARCHAR(255),
+            PRIMARY KEY (UUID, Town),
+            FOREIGN KEY (UUID) REFERENCES Players(UUID),
+            FOREIGN KEY (Town) REFERENCES Towns(Name));
+          """;
+    public static final String CREATE_TOWNS_TABLE = """
+            CREATE TABLE IF NOT EXISTS Towns (
+            Name VARCHAR(255) PRIMARY KEY,
+            Owner VARCHAR(36) NOT NULL,
+            VaultID INT NOT NULL,
+            Spawn INT NOT NULL,
+            FOREIGN KEY (VaultID) REFERENCES Vaults(VaultID),
+            FOREIGN KEY (Spawn) REFERENCES Spawns(SpawnID));
+            """;
 
-    public static final String CREATE_TOWNS_TABLE = "CREATE TABLE IF NOT EXISTS Towns (" +
-            "Name VARCHAR(255) PRIMARY KEY, " +
-            "Owner VARCHAR(36) NOT NULL," +
-            "VaultID INT NOT NULL, " +
-            "Spawn INT NOT NULL," +
-            "FOREIGN KEY (VaultID) REFERENCES Vaults(VaultID)," +
-            "FOREIGN KEY (Spawn) REFERENCES Spawns(SpawnID));";
+    public static final String CREATE_NATIONS_TABLE = """
+            CREATE TABLE IF NOT EXISTS Nations (
+            Name VARCHAR(255) PRIMARY KEY,
+            Owner VARCHAR(255) NOT NULL,
+            Level INT DEFAULT 1,
+            VaultID INT NOT NULL,
+            FOREIGN KEY (VaultID) REFERENCES Vaults(VaultID));
+            """;
 
-    public static final String CREATE_NATIONS_TABLE = "CREATE TABLE IF NOT EXISTS Nations (" +
-            "Name VARCHAR(255) PRIMARY KEY, " +
-            "Owner VARCHAR(255) NOT NULL," +
-            "Level INT DEFAULT 1, " +
-            "VaultID INT NOT NULL, " +
-            "FOREIGN KEY (VaultID) REFERENCES Vaults(VaultID));";
+    public static final String CREATE_TOWN_MEMBER_TABLE = """
+            CREATE TABLE IF NOT EXISTS TownMembers (
+            Nation VARCHAR(255),
+            Town VARCHAR(255),
+            PRIMARY KEY (Nation, Town),
+            FOREIGN KEY (Nation) REFERENCES Nations(Name),
+            FOREIGN KEY (Town) REFERENCES Towns(Name));
+            """;
 
-    public static final String CREATE_TOWN_MEMBER_TABLE = "CREATE TABLE IF NOT EXISTS TownMembers (" +
-            "Nation VARCHAR(255)," +
-            "Town VARCHAR(255)," +
-            "PRIMARY KEY (Nation, Town)," +
-            "FOREIGN KEY (Nation) REFERENCES Nations(Name)," +
-            "FOREIGN KEY (Town) REFERENCES Towns(Name));";
+    public static final String CREATE_VOTES_TABLE = """
+            CREATE TABLE IF NOT EXISTS Votes (
+            UUID VARCHAR(36),
+            Date DATETIME,
+            Website VARCHAR(255) NOT NULL,
+            PRIMARY KEY (UUID, Date));
+            """;
 
-    public static final String CREATE_VOTES_TABLE = "CREATE TABLE IF NOT EXISTS Votes (" +
-            "UUID VARCHAR(36), " +
-            "Date DATETIME, " +
-            "Website VARCHAR(255) NOT NULL, " +
-            "PRIMARY KEY (UUID, Date));";
+    public static final String CREATE_NODES_TABLE = """
+            CREATE TABLE IF NOT EXISTS Nodes (
+            NodeID INT AUTO_INCREMENT PRIMARY KEY,
+            OwnerUUID VARCHAR(36) NOT NULL,
+            x INT,
+            y INT,
+            z INT,
+            Resource VARCHAR(50),
+            Output INT,
+            FOREIGN KEY (OwnerUUID) REFERENCES Players(UUID));
+            """;
 
-    public static final String CREATE_NODES_TABLE = "CREATE TABLE IF NOT EXISTS Nodes (" +
-            "NodeID INT AUTO_INCREMENT PRIMARY KEY, " +
-            "OwnerUUID VARCHAR(36) NOT NULL, " +
-            "x INT, " +
-            "y INT, " +
-            "z INT, " +
-            "Resource VARCHAR(50), " +
-            "Output INT, " +
-            "FOREIGN KEY (OwnerUUID) REFERENCES Players(UUID));";
-
-    public static final String CREATE_WARS_TABLE = "CREATE TABLE IF NOT EXISTS Wars (" +
-            "DeclaringEntity VARCHAR(255), " +
-            "DefendingEntity VARCHAR(255), " +
-            "StartDate DATE, " +
-            "UltimatumDeal TEXT," +
-            "PRIMARY KEY (DeclaringEntity, DefendingEntity));";
+    public static final String CREATE_WARS_TABLE = """
+            CREATE TABLE IF NOT EXISTS Wars (
+            DeclaringEntity VARCHAR(255),
+            DefendingEntity VARCHAR(255),
+            StartDate DATETIME,
+            UltimatumDeal TEXT,
+            PRIMARY KEY (DeclaringEntity, DefendingEntity));
+            """;
 }

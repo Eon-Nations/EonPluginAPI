@@ -1,24 +1,22 @@
-package org.eonnations.eonpluginapi.database;
+package org.eonnations.eonpluginapi.database.dao;
 
 import org.eonnations.eonpluginapi.api.nations.Nation;
 import org.eonnations.eonpluginapi.api.nations.Town;
 
 import java.util.List;
 
-public class DatabaseNation implements Nation {
-    List<Town> members;
+public class DynamicNation implements Nation {
     String name;
     int level;
 
-    public DatabaseNation(List<Town> members, String name, int level) {
-        this.members = members;
+    public DynamicNation(String name, int level) {
         this.name = name;
         this.level = level;
     }
 
     @Override
     public List<Town> members() {
-        return members;
+        return List.of();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package org.eonnations.eonpluginapi.database;
+package org.eonnations.eonpluginapi.database.dao;
 
 import org.eonnations.eonpluginapi.api.economy.Vault;
 
