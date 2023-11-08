@@ -438,6 +438,7 @@ public class TestSQLDatabase {
         String memberTown = nameGen.name();
         createNation(UUID.randomUUID(), nameGen.name(), nameGen.name(), nationName);
         createTown(UUID.randomUUID(), nameGen.name(), memberTown);
+        sqlDatabase.addTownToNation(nationName, memberTown);
         boolean removed = sqlDatabase.removeTownFromNation(memberTown);
         assertTrue(removed);
     }

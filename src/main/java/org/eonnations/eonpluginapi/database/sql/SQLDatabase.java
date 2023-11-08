@@ -23,7 +23,7 @@ public class SQLDatabase implements Database {
         config.setJdbcUrl("jdbc:mysql://" + credentials.url() + ":" + credentials.port() + "/" + credentials.database());
         config.setUsername(credentials.user());
         config.setPassword(credentials.password());
-        config.setMaximumPoolSize(5);
+        config.setMaximumPoolSize(3);
         config.setConnectionTimeout(2000);
         return new HikariDataSource(config);
     }
