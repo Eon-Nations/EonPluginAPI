@@ -1,0 +1,91 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table vaults {
+  vault_id int [primary key]
+  coins int [default: 0, not null]
+  iron int [default: 0, not null]
+  gold int [default: 0, not null]
+  diamond int [default: 0, not null]
+  emeralds int [default: 0, not null]
+}
+
+Table spawns {
+  spawn_id int [primary key]
+  x int [not null]
+  y int [not null]
+  z int [not null]
+  yaw float [not null]
+  pitch float [not null]
+}
+
+Table players {
+  player_uuid binary(16) [primary key]
+  username varchar(20) [not null]
+  donor_rank varchar(20) [not null]
+  level int [not null, default: 1]
+  vault_id int
+}
+
+Table towns {
+  name varchar(20) [primary key]
+  owner binary(16) [not null]
+  level int [not null, default: 1]
+  vault_id int [not null]
+  spawn_id int
+}
+
+Table player_towns {
+  town_name varchar(20) [primary key]
+  owner_uuid binary(16) [primary key]
+}
+
+Table nations {
+  name varchar(20) [primary key]
+  head_town varchar(20) [not null]
+  level int [default: 1, not null]
+  vault_id int [not null]
+}
+
+Table nation_members {
+  nation varchar(20) [primary key]
+  town varchar(20) [primary key]
+}
+
+Table votes {
+  player_uuid binary(16) [primary key]
+  vote_date timestamp [primary key, default: "NOW()"]
+  website varchar(100) [not null]
+}
+
+Table nodes {
+  node_id int [primary key]
+  name_owner varchar(20) [not null]
+  x int [not null]
+  y int [not null]
+  z int [not null]
+  resource enum [not null]
+  output_rate int [not null]
+}
+
+Table wars {
+  declaring varchar(20) [primary key]
+  defending varchar(20) [primary key]
+  start_date timestamp [default: "NOW()"]
+  deal_details text
+}
+
+Ref: towns.vault_id - vaults.vault_id
+Ref: players.vault_id - vaults.vault_id
+Ref: towns.spawn_id - spawns.spawn_id
+
+Ref: player_towns.town_name - towns.name
+Ref: player_towns.owner_uuid - players.player_uuid
+
+Ref: nations.vault_id - vaults.vault_id
+Ref: nation_members.nation - nations.name
+Ref: nation_members.town - towns.name
+
+Ref: votes.player_uuid > players.player_uuid
+
+Ref: nodes.name_owner > towns.name

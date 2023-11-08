@@ -1,34 +1,37 @@
 package org.eonnations.eonpluginapi.api.database;
 
-import org.eonnations.eonpluginapi.api.EonPlayer;
-import org.eonnations.eonpluginapi.api.economy.Vault;
-import org.eonnations.eonpluginapi.api.economy.Vote;
-import org.eonnations.eonpluginapi.api.nations.Nation;
-import org.eonnations.eonpluginapi.api.nations.Spawn;
-import org.eonnations.eonpluginapi.api.nations.Town;
+import io.vavr.control.Either;
+import io.vavr.control.Option;
+import org.eonnations.eonpluginapi.api.records.*;
 
-import java.util.List;
-import java.util.Optional;
+import java.sql.SQLException;
 import java.util.UUID;
 
 public interface Database {
-    Vault townVault(String townName);
-    Vault playerVault(UUID uuid);
-    Vault playerVault(String uuidString);
-    Vault createVault();
+    Either<SQLException, Vault> retrieveVault(int vaultId);
+    Option<SQLException> removeVault(int vaultId);
 
-    Nation createNation(String name);
-    Optional<Nation> nation(String name);
-    boolean removeNation(String name);
+    Either<SQLException, Integer> createSpawn(int x, int y, int z);
+    Either<SQLException, Integer> createSpawn(int x, int y, int z, float yaw, float pitch);
 
-    Town createTown(String name, UUID owner, Spawn spawn);
-    Optional<Town> town(String name);
-    boolean removeTown(String name);
+    Option<SQLException> createPlayer(UUID uuid, String username);
+    Either<SQLException, Integer> levelUpPlayer(UUID uuid);
+    Either<SQLException, Vault> playerVault(UUID uuid);
+    Either<SQLException, EonPlayer> retrievePlayer(UUID uuid);
+    Either<SQLException, EonPlayer> retrievePlayer(String username);
 
-    EonPlayer createPlayer(UUID uuid, String name);
-    Optional<EonPlayer> retrievePlayer(UUID uuid);
-    Optional<EonPlayer> retrievePlayer(String name);
+    Either<SQLException, Vault> createTown(String name, UUID uuid, Spawn spawn);
+    Either<SQLException, Town> retrieveTown(String name);
+    Option<SQLException> changeTownSpawn(String name, Spawn newSpawn);
+    boolean deleteTown(String name);
+    Either<SQLException, Integer> levelUpTown(String name);
 
-    Vote createVote(UUID uuid);
-    List<Vote> findVotes(UUID uuid);
+    Option<SQLException> createNation(String name, String ownerTown);
+    boolean deleteNation(String name);
+    Either<SQLException, Nation> retrieveNation(String name);
+    Either<SQLException, Integer> levelUpNation(String name);
+    boolean addTownToNation(String nation, String town);
+    boolean removeTownFromNation(String town);
+
+    Option<SQLException> addVote(UUID uuid, String website);
 }

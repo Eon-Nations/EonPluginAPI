@@ -5,4 +5,5 @@ public @interface Command {
     String usage();
     Alias[] aliases() default {};
     String description() default "";
+    String permission() default "";
 }
