@@ -4,42 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Updated table queries to be consistent">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/EonPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/Nation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/Spawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/Town.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/Vault.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/Vote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/sql/SQLDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/diagram.dbml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tables_functions.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/database/sql/NameGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/database/sql/TestSQLDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/EonPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Resource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Vault.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/economy/Vote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Nation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Spawn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/nations/Town.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/dao/DatabaseTown.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/dao/DatabaseVault.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/dao/DynamicNation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/queries/TableQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/sql/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/database/sql/SQLClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSQLClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/database/MySQLTestContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/database/TestResult.java" beforeDir="false" />
-    </list>
+    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Finished base code for PluginAPI. More to come" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,7 +234,7 @@
       <workItem from="1699307383019" duration="14072000" />
       <workItem from="1699329269383" duration="362000" />
       <workItem from="1699380524312" duration="16077000" />
-      <workItem from="1699398500226" duration="2180000" />
+      <workItem from="1699398500226" duration="3422000" />
     </task>
     <task id="LOCAL-00001" summary="Changed database to SQL&#10;Server is no longer a survival server, so the plugin API is not reflecting that">
       <option name="closed" value="true" />
@@ -287,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694397693897</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished base code for PluginAPI. More to come">
+      <option name="closed" value="true" />
+      <created>1699403176495</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699403176496</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +280,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed database to SQL&#10;Server is no longer a survival server, so the plugin API is not reflecting that" />
     <MESSAGE value="Updated table queries to be consistent" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated table queries to be consistent" />
+    <MESSAGE value="Finished base code for PluginAPI. More to come" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished base code for PluginAPI. More to come" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
