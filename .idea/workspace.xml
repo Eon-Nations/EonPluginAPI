@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Added jitpack.yml for JitPack">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql5compat.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/Vault.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/api/records/Vault.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tables_functions.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tables_functions.sql" afterDir="false" />
-    </list>
+    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Changed coins to copper" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -251,7 +245,7 @@
       <workItem from="1699557109759" duration="1433000" />
       <workItem from="1699595288653" duration="248000" />
       <workItem from="1702078012864" duration="608000" />
-      <workItem from="1703091840526" duration="2200000" />
+      <workItem from="1703091840526" duration="2504000" />
     </task>
     <task id="LOCAL-00001" summary="Changed database to SQL&#10;Server is no longer a survival server, so the plugin API is not reflecting that">
       <option name="closed" value="true" />
@@ -301,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699503756376</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changed coins to copper">
+      <option name="closed" value="true" />
+      <created>1703094758135</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703094758135</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +327,8 @@
     <MESSAGE value="Removed unnecessary diagram.dbml" />
     <MESSAGE value="Changed runtime retention policy" />
     <MESSAGE value="Added jitpack.yml for JitPack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added jitpack.yml for JitPack" />
+    <MESSAGE value="Changed coins to copper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed coins to copper" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

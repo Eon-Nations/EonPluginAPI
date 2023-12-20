@@ -72,7 +72,7 @@ public class TestSQLDatabase {
         Either<SQLException, Vault> vaultResult = sqlDatabase.retrieveVault(vaultId);
         assertTrue(vaultResult.isRight());
         Vault vault = vaultResult.get();
-        assertEquals(10, vault.coins());
+        assertEquals(10, vault.copper());
         assertEquals(5, vault.iron());
         assertEquals(2, vault.gold());
         assertEquals(1, vault.diamonds());
@@ -167,7 +167,7 @@ public class TestSQLDatabase {
         assertTrue(vaultResult.isRight());
         Vault vault = vaultResult.get();
         assertTrue(vault.id() > 0);
-        assertEquals(0, vault.coins());
+        assertEquals(0, vault.copper());
     }
 
     @Test
