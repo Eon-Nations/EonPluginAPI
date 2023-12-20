@@ -47,7 +47,7 @@ public class TestSQLDatabase {
     private Vault createVault() throws SQLException {
         int vaultId = -1;
         try (Connection conn = DriverManager.getConnection(sqlDatabase.getUrl(), "root", "root_password")) {
-            PreparedStatement statement = conn.prepareStatement("INSERT INTO vaults (coins, iron, gold, diamonds, emeralds) VALUES (10, 5, 2, 1, 15)", PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement statement = conn.prepareStatement("INSERT INTO vaults (copper, iron, gold, diamonds, emeralds) VALUES (10, 5, 2, 1, 15)", PreparedStatement.RETURN_GENERATED_KEYS);
             statement.executeUpdate();
             ResultSet set = statement.getGeneratedKeys();
             if (set.next()) {

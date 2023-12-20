@@ -130,13 +130,13 @@ public class SQLDatabase implements Database {
                 prodCall.setString(1, uuid.toString());
                 ResultSet result = prodCall.executeQuery();
                 if (result.next()) {
-                    int coins = result.getInt(1);
+                    int copper = result.getInt(1);
                     int iron = result.getInt(2);
                     int gold = result.getInt(3);
                     int diamonds = result.getInt(4);
                     int emeralds = result.getInt(5);
                     int vaultId = result.getInt(6);
-                    return Either.right(new Vault(vaultId, coins, iron, gold, diamonds, emeralds));
+                    return Either.right(new Vault(vaultId, copper, iron, gold, diamonds, emeralds));
                 }
                 return Either.left(new SQLException("Could not find vault", "99001"));
             }
@@ -147,12 +147,12 @@ public class SQLDatabase implements Database {
 
     public Vault parseVault(ResultSet set, Option<Integer> maybeVaultId) throws SQLException {
         int vaultId = maybeVaultId.getOrElse(set.getInt("vault_id"));
-        int coins = set.getInt("coins");
+        int copper = set.getInt("copper");
         int iron = set.getInt("iron");
         int gold = set.getInt("gold");
         int diamonds = set.getInt("diamonds");
         int emeralds = set.getInt("emeralds");
-        return new Vault(vaultId, coins, iron, gold, diamonds, emeralds);
+        return new Vault(vaultId, copper, iron, gold, diamonds, emeralds);
     }
 
     @Override
