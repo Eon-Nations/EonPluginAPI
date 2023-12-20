@@ -1,8 +1,8 @@
 
 CREATE TABLE IF NOT EXISTS vaults (
     vault_id INT PRIMARY KEY AUTO_INCREMENT,
-    coins INT DEFAULT 0 NOT NULL,
-    CHECK (coins >= 0),
+    copper INT DEFAULT 0 NOT NULL,
+    CHECK (copper >= 0),
     iron INT DEFAULT 0 NOT NULL,
     CHECK (iron >= 0),
     gold INT DEFAULT 0 NOT NULL,
@@ -31,7 +31,7 @@ READS SQL DATA
 BEGIN
     SELECT
         vault_id,
-        coins,
+        copper,
         iron,
         gold,
         diamonds,
@@ -129,7 +129,7 @@ BEGIN
     DECLARE p_uuid BINARY(16) DEFAULT UUID_TO_BIN(in_uuid);
 
     SELECT
-        coins,
+        copper,
         iron,
         gold,
         diamonds,
@@ -151,7 +151,7 @@ BEGIN
         last_online,
         town_name,
         players.vault_id as vault_id,
-        coins,
+        copper,
         iron,
         gold,
         diamonds,
@@ -187,7 +187,7 @@ BEGIN
        VALUES (town_name, UUID_TO_BIN(owner_uuid));
     SELECT
         vault_id,
-        coins,
+        copper,
         iron,
         gold,
         diamonds,
@@ -207,7 +207,7 @@ BEGIN
          s.z as z,
          s.pitch as pitch,
          s.yaw as yaw,
-         v.coins as coins,
+         v.copper as copper,
          v.iron as iron,
          v.gold as gold,
          v.diamonds as diamonds,
@@ -308,7 +308,7 @@ BEGIN
         owner_town,
         v.vault_id,
         level,
-        coins,
+        copper,
         gold,
         diamonds,
         emeralds,
@@ -370,7 +370,7 @@ CREATE TABLE IF NOT EXISTS nodes (
     x INT NOT NULL,
     y INT NOT NULL,
     z INT NOT NULL,
-    resource ENUM('coins', 'iron', 'gold', 'diamonds', 'emeralds') NOT NULL,
+    resource ENUM('copper', 'iron', 'gold', 'diamonds', 'emeralds') NOT NULL,
     output_rate INT NOT NULL,
     FOREIGN KEY (owner_town) REFERENCES towns(name)
 );
