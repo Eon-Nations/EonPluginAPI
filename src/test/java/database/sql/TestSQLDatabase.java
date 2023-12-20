@@ -47,7 +47,7 @@ public class TestSQLDatabase {
     private Vault createVault() throws SQLException {
         int vaultId = -1;
         try (Connection conn = DriverManager.getConnection(sqlDatabase.getUrl(), "root", "root_password")) {
-            PreparedStatement statement = conn.prepareStatement("INSERT INTO vaults (coins, iron, gold, diamonds, emeralds) VALUES (10, 5, 2, 1, 15)", PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement statement = conn.prepareStatement("INSERT INTO vaults (copper, iron, gold, diamonds, emeralds) VALUES (10, 5, 2, 1, 15)", PreparedStatement.RETURN_GENERATED_KEYS);
             statement.executeUpdate();
             ResultSet set = statement.getGeneratedKeys();
             if (set.next()) {
@@ -72,7 +72,7 @@ public class TestSQLDatabase {
         Either<SQLException, Vault> vaultResult = sqlDatabase.retrieveVault(vaultId);
         assertTrue(vaultResult.isRight());
         Vault vault = vaultResult.get();
-        assertEquals(10, vault.coins());
+        assertEquals(10, vault.copper());
         assertEquals(5, vault.iron());
         assertEquals(2, vault.gold());
         assertEquals(1, vault.diamonds());
@@ -167,7 +167,7 @@ public class TestSQLDatabase {
         assertTrue(vaultResult.isRight());
         Vault vault = vaultResult.get();
         assertTrue(vault.id() > 0);
-        assertEquals(0, vault.coins());
+        assertEquals(0, vault.copper());
     }
 
     @Test
