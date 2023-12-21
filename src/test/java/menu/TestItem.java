@@ -27,7 +27,7 @@ public class TestItem extends TestUtility {
         Player jim = server.addPlayer("Jim");
         jim.getInventory().setItem(0, bukkitItem);
         Item item = Item.builder(bukkitItem)
-                .handler(ClickType.LEFT, e -> true)
+                .handler(ClickType.LEFT, true, e -> true)
                 .finish();
         jim.openInventory(jim.getInventory());
         InventoryClickEvent event = new InventoryClickEvent(jim.getOpenInventory(), InventoryType.SlotType.CONTAINER, 0, ClickType.LEFT, InventoryAction.NOTHING);
@@ -43,7 +43,7 @@ public class TestItem extends TestUtility {
         Player jim = server.addPlayer("Jim");
         jim.getInventory().setItem(0, bukkitItem);
         Item item = Item.builder(bukkitItem)
-                .handler(ClickType.LEFT, e -> false)
+                .handler(ClickType.LEFT, true, e -> false)
                 .finish();
         jim.openInventory(jim.getInventory());
         InventoryClickEvent event = new InventoryClickEvent(jim.getOpenInventory(), InventoryType.SlotType.CONTAINER, 0, ClickType.LEFT, InventoryAction.NOTHING);
@@ -69,8 +69,8 @@ public class TestItem extends TestUtility {
             return true;
         };
         Item item = Item.builder(bukkitItem)
-                .handler(ClickType.LEFT, first)
-                .handler(ClickType.MIDDLE, second)
+                .handler(ClickType.LEFT, true, first)
+                .handler(ClickType.MIDDLE, true, second)
                 .finish();
         jim.openInventory(jim.getInventory());
         InventoryClickEvent leftClick = new InventoryClickEvent(jim.getOpenInventory(), InventoryType.SlotType.CONTAINER, 0, ClickType.LEFT, InventoryAction.NOTHING);
