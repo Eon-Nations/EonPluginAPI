@@ -42,7 +42,7 @@ public class EventHandler<T extends Event> implements EventExecutor, Listener, A
         }
 
         T eventInstance = eventClass.cast(event);
-        boolean passAllChecks = Try.of(() -> filters.map(f -> f.apply(eventInstance))
+        boolean passAllChecks = filters.isEmpty() || Try.of(() -> filters.map(f -> f.apply(eventInstance))
                 .forAll(b -> b))
                 .getOrElse(false);
         if (!passAllChecks) return;
