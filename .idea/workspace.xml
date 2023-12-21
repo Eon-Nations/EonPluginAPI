@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Changed coins to copper" />
+    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Changed runtime retention policy">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/menu/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/menu/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/menu/MenuBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/menu/MenuInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +24,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,7 +61,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;coins-to-copper&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Projects/EonPluginAPI/src/main/resources/tables_functions.sql&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -153,10 +159,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestSQLDatabase.testValidRetrieve" />
-        <item itemvalue="JUnit.TestSQLDatabase.testNonExistentTownSpawn" />
-        <item itemvalue="JUnit.TestSQLDatabase.testExistingPlayerUsername" />
-        <item itemvalue="JUnit.TestSQLDatabase" />
         <item itemvalue="Database Script.tables_functions.sql" />
       </list>
     </recent_temporary>
@@ -242,14 +244,8 @@
       <workItem from="1699404313673" duration="362000" />
       <workItem from="1699479595984" duration="291000" />
       <workItem from="1699484859452" duration="1123000" />
-      <workItem from="1699503245349" duration="679000" />
-      <workItem from="1699555547281" duration="63000" />
-      <workItem from="1699555741213" duration="19000" />
-      <workItem from="1699556871572" duration="17000" />
-      <workItem from="1699557109759" duration="1433000" />
-      <workItem from="1699595288653" duration="248000" />
-      <workItem from="1702078012864" duration="608000" />
-      <workItem from="1703091840526" duration="2504000" />
+      <workItem from="1703106557627" duration="9859000" />
+      <workItem from="1703130279221" duration="1301000" />
     </task>
     <task id="LOCAL-00001" summary="Changed database to SQL&#10;Server is no longer a survival server, so the plugin API is not reflecting that">
       <option name="closed" value="true" />
@@ -291,23 +287,7 @@
       <option name="project" value="LOCAL" />
       <updated>1699479127140</updated>
     </task>
-    <task id="LOCAL-00006" summary="Added jitpack.yml for JitPack">
-      <option name="closed" value="true" />
-      <created>1699503756376</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1699503756376</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Changed coins to copper">
-      <option name="closed" value="true" />
-      <created>1703094758135</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1703094758135</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,9 +310,7 @@
     <MESSAGE value="Finished base code for PluginAPI. More to come" />
     <MESSAGE value="Removed unnecessary diagram.dbml" />
     <MESSAGE value="Changed runtime retention policy" />
-    <MESSAGE value="Added jitpack.yml for JitPack" />
-    <MESSAGE value="Changed coins to copper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed coins to copper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed runtime retention policy" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
