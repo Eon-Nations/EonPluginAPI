@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Changed coins to copper">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/events/TestEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/events/TestEventSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/TestPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/TestUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/events/TestEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/events/TestEventHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="menu-api" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +59,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "database.data.extractors.current.export.id": "SQL Inserts",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "autoclosable-eventhandler",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Projects/EonPluginAPI/src/main/resources/tables_functions.sql",
     "node.js.detected.package.eslint": "true",
@@ -98,7 +91,7 @@
       <recent name="org.eonnations.eonpluginapi.events" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestEventSubscriber">
+  <component name="RunManager" selected="JUnit.TestEventHandler">
     <configuration name="TestEventHandler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EonPluginAPI" />
       <extension name="coverage">
@@ -179,8 +172,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestEventSubscriber" />
         <item itemvalue="JUnit.TestEventHandler" />
+        <item itemvalue="JUnit.TestEventSubscriber" />
         <item itemvalue="JUnit.TestSQLDatabase.testValidRetrieve" />
         <item itemvalue="JUnit.TestSQLDatabase.testNonExistentTownSpawn" />
         <item itemvalue="JUnit.TestSQLDatabase.testExistingPlayerUsername" />
@@ -276,6 +269,7 @@
       <workItem from="1699595288653" duration="248000" />
       <workItem from="1702078012864" duration="608000" />
       <workItem from="1703091840526" duration="2504000" />
+      <workItem from="1703138390271" duration="1290000" />
     </task>
     <task id="LOCAL-00001" summary="Changed database to SQL&#10;Server is no longer a survival server, so the plugin API is not reflecting that">
       <option name="closed" value="true" />
