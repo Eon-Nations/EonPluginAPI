@@ -2,12 +2,14 @@ package events;
 
 import io.vavr.Function1;
 import io.vavr.collection.List;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.eonnations.eonpluginapi.events.EventHandler;
 import org.junit.jupiter.api.DisplayName;
@@ -111,5 +113,37 @@ public class TestEventHandler extends TestUtility {
         });
         server.getPluginManager().callEvent(event);
         assertTrue(jim.getInventory().contains(Material.DIRT));
+    }
+
+    @Test
+    @DisplayName("AutoClosable method will unregister the listener")
+    void testAutoClose() {
+        Player jim = server.addPlayer("Jim");
+        PlayerJoinEvent joinEvent = new PlayerJoinEvent(jim, Component.text("Nice"));
+        AtomicBoolean wasCalled = new AtomicBoolean(false);
+        EventHandler<PlayerJoinEvent> handler = new EventHandler<>(plugin, PlayerJoinEvent.class, EventPriority.NORMAL, List.of(), e -> false, e -> {
+            wasCalled.set(true);
+            return false;
+        });
+        handler.close();
+        server.getPluginManager().callEvent(joinEvent);
+        assertFalse(wasCalled.get());
+    }
+
+    @Test
+    @DisplayName("Unregistering a EventHandler multiple times doesn't throw an error")
+    void testMultipleCloses() {
+        Player jim = server.addPlayer("Jim");
+        PlayerJoinEvent joinEvent = new PlayerJoinEvent(jim, Component.text("Nice"));
+        AtomicBoolean wasCalled = new AtomicBoolean(false);
+        EventHandler<PlayerJoinEvent> handler = new EventHandler<>(plugin, PlayerJoinEvent.class, EventPriority.NORMAL, List.of(), e -> false, e -> {
+            wasCalled.set(true);
+            return false;
+        });
+        handler.close();
+        handler.close();
+        handler.close();
+        server.getPluginManager().callEvent(joinEvent);
+        assertFalse(wasCalled.get());
     }
 }

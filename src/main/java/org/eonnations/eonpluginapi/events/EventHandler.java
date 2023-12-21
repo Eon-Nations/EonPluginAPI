@@ -11,13 +11,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Method;
+import java.util.concurrent.atomic.AtomicBoolean;
 
-public class EventHandler<T extends Event & Cancellable> implements EventExecutor, Listener {
+public class EventHandler<T extends Event> implements EventExecutor, Listener, AutoCloseable {
     private final Class<T> eventClass;
     private final EventPriority priority;
     private final Function1<Throwable, Boolean> exceptionHandler;
     private final List<Function1<T, Boolean>> filters;
     private final Function1<T, Boolean> handler;
+    private final AtomicBoolean isActive = new AtomicBoolean(true);
 
     public EventHandler(JavaPlugin plugin, Class<T> eventClass, EventPriority priority, List<Function1<T, Boolean>> filters, Function1<Throwable, Boolean> exceptionHandler, Function1<T, Boolean> handler) {
         this.eventClass = eventClass;
@@ -61,5 +63,23 @@ public class EventHandler<T extends Event & Cancellable> implements EventExecuto
         } catch (Exception e) {
             return Either.left(e);
         }
+    }
+
+
+    private void unregister() {
+        try {
+            Method getHanderList = eventClass.getMethod("getHandlerList");
+            HandlerList handlerList = (HandlerList) getHanderList.invoke(null);
+            handlerList.unregister(this);
+        } catch (Exception e) {
+            // No action needed
+        }
+    }
+
+    @Override
+    public void close() {
+        if (!isActive.get()) return;
+        isActive.set(false);
+        unregister();
     }
 }
