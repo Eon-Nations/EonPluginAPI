@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Changed coins to copper" />
+    <list default="true" id="8994d7b0-4d81-4cc7-9cec-84ff61603e9e" name="Changes" comment="Changed coins to copper">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/events/TestEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/events/TestEventSubscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/TestPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/TestUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/eonnations/eonpluginapi/events/EventCreator.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="menu-api" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,30 +58,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;coins-to-copper&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/EonPluginAPI/src/main/resources/tables_functions.sql&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.data.views&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "SQL Inserts",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Projects/EonPluginAPI/src/main/resources/tables_functions.sql",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "database.data.views",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projects\EonPluginAPI\src\test\resources" />
@@ -81,23 +92,38 @@
       <recent name="C:\Projects\EonPluginAPI\src\main\resources" />
       <recent name="C:\Projects\EonPluginAPI\src\main\sql" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utils" />
+      <recent name="events" />
+      <recent name="org.eonnations.eonpluginapi.events" />
+    </key>
   </component>
-  <component name="RunManager" selected="Database Script.tables_functions.sql">
-    <configuration name="tables_functions.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/tables_functions.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSQLDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestEventSubscriber">
+    <configuration name="TestEventHandler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EonPluginAPI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="database.sql.*" />
+          <option name="PATTERN" value="events.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="database.sql" />
-      <option name="MAIN_CLASS_NAME" value="database.sql.TestSQLDatabase" />
+      <option name="PACKAGE_NAME" value="events" />
+      <option name="MAIN_CLASS_NAME" value="events.TestEventHandler" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEventSubscriber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EonPluginAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="events" />
+      <option name="MAIN_CLASS_NAME" value="events.TestEventSubscriber" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestEventSubscriber" />
+        <item itemvalue="JUnit.TestEventHandler" />
         <item itemvalue="JUnit.TestSQLDatabase.testValidRetrieve" />
         <item itemvalue="JUnit.TestSQLDatabase.testNonExistentTownSpawn" />
         <item itemvalue="JUnit.TestSQLDatabase.testExistingPlayerUsername" />
-        <item itemvalue="JUnit.TestSQLDatabase" />
-        <item itemvalue="Database Script.tables_functions.sql" />
       </list>
     </recent_temporary>
   </component>
