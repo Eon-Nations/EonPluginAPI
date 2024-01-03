@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 /*
 Inspired by lucko's helper
  */
-public class EventSubscriber<T extends Event & Cancellable> {
+public class EventSubscriber<T extends Event> {
     private List<Function1<T, Boolean>> filters;
     private Function1<Throwable, Boolean> exceptionHandler = t -> false;
     private final Class<T> eventClass;
