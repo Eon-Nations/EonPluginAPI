@@ -3,7 +3,6 @@ package org.eonnations.eonpluginapi.events;
 import io.vavr.Function1;
 import io.vavr.collection.List;
 import org.bukkit.Bukkit;
-import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,7 +24,7 @@ public class EventSubscriber<T extends Event> {
         this.plugin = plugin;
     }
 
-    public static <V extends Event & Cancellable> EventSubscriber<V> subscribe(Class<V> eventClass, EventPriority priority) {
+    public static <V extends Event> EventSubscriber<V> subscribe(Class<V> eventClass, EventPriority priority) {
         JavaPlugin plugin = (JavaPlugin) Bukkit.getPluginManager().getPlugin("EonCore");
         return new EventSubscriber<>(eventClass, priority, plugin);
     }
