@@ -19,7 +19,7 @@ EonPluginAPI acts as the foundation for multiple repositories within the Eon ser
 
 ## Contributing
 
-We encourage developers to contribute to EonCore by submitting code, reporting bugs, and proposing new features. To contribute:
+We encourage developers to contribute to the EonPluginAPI by submitting code, reporting bugs, and proposing new features. To contribute:
 
 1. Fork the repository to your GitHub account.
 2. Create a new branch for your feature or bug fix.
