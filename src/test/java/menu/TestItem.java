@@ -6,15 +6,23 @@ import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.eonnations.eonpluginapi.menu.Item;
 import org.eonnations.eonpluginapi.menu.MenuInteraction;
+import org.eonnations.eonpluginapi.menu.Menu;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import be.seeseemelk.mockbukkit.entity.PlayerMock;
 import utils.TestUtility;
+
+import net.kyori.adventure.text.Component;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -83,4 +91,34 @@ public class TestItem extends TestUtility {
         assertTrue(middleClick.isCancelled());
         item.close();
     }
+
+    @Test
+    @DisplayName("Changing the items name will display the different item")
+    @Disabled("Will be re-enabled once MockBukkit fixes stack overflow issue")
+    void testItemNameChange() {
+        Component expectedName = Component.text("Testing Name");
+        PlayerMock jim = server.addPlayer();
+        Item item = Item.builder(Material.DIRT).name(expectedName).finish();
+        Menu menu = Menu.create(27, Component.text("Testing Menu"))
+            .withItem(0, item)
+            .complete(); 
+        jim.openInventory(menu.getInventory());
+        InventoryView view = jim.getOpenInventory();
+        assertEquals(expectedName, view.getTopInventory().getItem(0).displayName());
+    }
+
+    @Test
+    @DisplayName("Changing the items lore will display")
+    void testItemLoreChange() {
+        Component expectedLore = Component.text("Testing Lore");
+        PlayerMock jim = server.addPlayer();
+        Item item = Item.builder(Material.DIRT).lore(expectedLore).finish();
+        Menu menu = Menu.create(27, Component.text("Testing Menu"))
+            .withItem(0, item)
+            .complete(); 
+        menu.openToPlayer(jim);
+        InventoryView view = jim.getOpenInventory();
+        assertTrue(view.getTopInventory().getItem(0).lore().stream().anyMatch(c -> c.equals(expectedLore)));
+    }
+
 }

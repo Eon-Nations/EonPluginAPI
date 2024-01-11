@@ -5,8 +5,13 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.eonnations.eonpluginapi.events.EventHandler;
 import org.eonnations.eonpluginapi.events.EventSubscriber;
+
+import io.vavr.collection.List;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -81,6 +86,28 @@ public class Item implements AutoCloseable {
                     handlers.putIfAbsent(other, e -> true);
                 }
             }
+            return this;
+        }
+
+        public Builder name(Component name) {
+            ItemMeta meta = item.getItemMeta();
+            meta.displayName(name);
+            item.setItemMeta(meta);
+            return this;
+        }
+
+        public Builder lore(String lore) {
+            MiniMessage miniMessage = MiniMessage.miniMessage();
+            Component parsed = miniMessage.deserialize(lore);
+            return lore(parsed);
+        }
+
+        public Builder lore(Component lore) {
+            ItemMeta meta = item.getItemMeta();
+            List<Component> currentLore = meta.hasLore() ? List.ofAll(meta.lore()) : List.of();
+            List<Component> newLore = currentLore.append(lore);
+            meta.lore(newLore.asJava());
+            item.setItemMeta(meta);
             return this;
         }
 

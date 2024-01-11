@@ -2,6 +2,7 @@ package org.eonnations.eonpluginapi.menu;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
@@ -55,11 +56,15 @@ public class Menu implements AutoCloseable, InventoryHolder {
         private final Map<Integer, Item> itemMap;
         private final Component title;
         private final int size;
+        private boolean makeDummies;
+
+        private static final Item dummyItem = Item.builder(Material.GRAY_STAINED_GLASS_PANE).name(Component.text("")).finish();
 
         public Builder(int size, Component title) {
             this.size = size;
             this.title = title;
             this.itemMap = new HashMap<>();
+            this.makeDummies = false;
         }
 
         public Builder withItem(int slot, Item item) {
@@ -67,7 +72,17 @@ public class Menu implements AutoCloseable, InventoryHolder {
             return this;
         }
 
+        public Builder makeDummySlots() {
+            makeDummies = true;
+            return this;
+        }
+
         public Menu complete() {
+            if (makeDummies) {
+                for (int i = 0; i < size; i++) {
+                    if (!itemMap.containsKey(i)) itemMap.put(i, dummyItem);
+                }
+            }
             return new Menu(size, title, itemMap);
         }
     }
