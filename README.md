@@ -1,3 +1,5 @@
+⚠️ Project has been Deprecated in favor of EonCore ⚠️
+
 # EonPluginAPI
 
 Welcome to EonPluginAPI, a powerful and versatile API designed to provide shared functionality across various repositories within the Eon Minecraft server ecosystem. This API simplifies common tasks, offers a clean interface to the database, and provides an improved development experience for Bukkit events.
